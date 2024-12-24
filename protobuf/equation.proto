@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package chemical;
+package protobuf;
 option go_package = "github.com/kaushik592k/equations/protobuf";
 
 service ChemicalBalancer {
