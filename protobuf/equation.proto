@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package chemical;
+option go_package = "./";
+
+service ChemicalBalancer {
+  rpc BalanceEquation (BalanceRequest) returns (BalanceResponse);
+}
+
+message BalanceRequest {
+  string equation = 1; 
+}
+
+message BalanceResponse {
+  string balanced_equation = 1; 
+  string error_message = 2; 
+}
