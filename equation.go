@@ -9,7 +9,8 @@ import (
 	"strings"
 
 	"google.golang.org/grpc"
-	pb "./protobuf" // after this messages & services defined in proto can be used
+	pb "github.com/kaushik592k/equations/protobuf"
+
 )
 
 type server struct {
