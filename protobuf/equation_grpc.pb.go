@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v5.29.2
-// source: equation.proto
+// source: protobuf/equation.proto
 
 package protobuf
 
@@ -117,5 +117,5 @@ var ChemicalBalancer_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "equation.proto",
+	Metadata: "protobuf/equation.proto",
 }
