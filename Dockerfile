@@ -10,13 +10,7 @@ RUN go mod tidy
 COPY . .
 COPY protobuf /protobuf
 RUN protoc -I=/protobuf --go_out=. --go-grpc_out=. /protobuf/equation.proto
-RUN ls -l /app
-
 RUN go build -o equation . 
-
-# run the image
-FROM alpine:latest 
-WORKDIR /root/
-COPY --from=builder /app/equations .
+RUN ls -l /app
 EXPOSE 50051
 CMD ["./equation"]
