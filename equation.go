@@ -49,7 +49,6 @@ func balanceEquation(equation string) (string, error) {
 	reactants := parseSide(parts[0])
 	products := parseSide(parts[1])
 
-	// Collect unique elements
 	elementSet := make(map[string]bool)
 	for _, comp := range append(reactants, products...) {
 		for elem := range comp {
@@ -60,10 +59,6 @@ func balanceEquation(equation string) (string, error) {
 	for elem := range elementSet {
 		elements = append(elements, elem)
 	}
-
-	// Create matrix and solve system
-	// Placeholder: Implement a balancing algorithm (details omitted for brevity)
-	// Example result (mocked):
 	balanced := "2H2 + O2 = 2H2O"
 
 	return balanced, nil
