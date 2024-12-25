@@ -1,4 +1,4 @@
-module equation
+module equations
 
 go 1.23.1
 

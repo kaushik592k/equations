@@ -17,6 +17,6 @@ RUN go build -o equation .
 # run the image
 FROM alpine:latest 
 WORKDIR /root/
-COPY --from=builder /app/equation .
+COPY --from=builder /app/equations .
 EXPOSE 50051
 CMD ["./equation"]
